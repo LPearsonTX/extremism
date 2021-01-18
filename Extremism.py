@@ -101,12 +101,12 @@ bar_chart = html.Div(dcc.Graph(id='bar',figure=bar_fig))
 
 app.layout = html.Div([
     dbc.Row([
-        dbc.Col(title_block, width=8),
-        dbc.Col(GWU_block)
+        dbc.Col(title_block, width=12, md=8),
+        dbc.Col(GWU_block),
     ]),
     dbc.Row([
-        dbc.Col(choropleth_map),
-        dbc.Col(bar_chart)
+        dbc.Col(choropleth_map,width=12, lg=6),
+        dbc.Col(bar_chart,width=12, lg=6)
     ])
 ], style=CONTENT_STYLE)
 
