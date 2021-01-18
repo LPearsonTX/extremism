@@ -62,11 +62,12 @@ bar_fig = px.bar(bar_data_filtered,
             orientation='h',
             color_discrete_sequence=['Grey','LightGrey'],
             title="Age at time of arrest",
+            text='Gender_count',
             labels={ # replaces default labels by column name
                 "gender": "Gender", 'AgeRange':'','Gender_count':''
             },
             )
-
+bar_fig.update_traces(textfont_color='white')
 
 # Build App
 app = dash.Dash(external_stylesheets=[dbc.themes.SUPERHERO])
